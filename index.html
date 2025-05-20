@@ -21,13 +21,14 @@
                 <p class="header__contacts-date">Пн-Пт 09:00 – 18:00</p>
                 <p class="header__contacts-word">Контакты</p>
                 <a class="header__contacts-telephone" href="tel:74812302604">
-                   +7 (4812) 302-604
+                    +7 (4812) 302-604
                 </a>
                 <a class="header__contacts-telephone" href="tel:+79525356113">
                     +7 (952) 535-61-13
                 </a>
             </div>
-            <button class="btn header__btn_tel">Авторизоваться</button>
+            <button class="btn header__btn-register">Зарегистрироваться</button>
+            <button class="btn header__btn-login">Авторизоваться</button>
         </div>
         <div class="menu">
             <nav class="menu__main">
@@ -113,6 +114,18 @@
         <input class="login-form__input" type="password" name="password" placeholder="Пароль" required>
         <button class="login-form__btn" type="submit">Войти</button>
     </form>
+    
+    <form class="register-form" method="post" action="register.php">
+        <div class="register-form__title">Регистрация</div>
+        <?php if (!empty($error)): ?>
+        <div class="register-form__error">
+            <?= htmlspecialchars($error) ?>
+        </div>
+        <?php endif; ?>
+        <input class="register-form__input" type="text" name="username" placeholder="Имя" required>
+        <input class="register-form__input" type="password" name="password" placeholder="Пароль" required>
+        <button class="register-form__btn" type="submit">Зарегистрироваться</button>
+    </form>
 
     <main>
         <section class="advantages content-section">
@@ -173,15 +186,18 @@
                 <div class="tariff-card">
                     <div class="tariff-card__header">Отчетность</div>
                     <div class="tariff-card__desc">
-                        Вы самостоятельно вносите в программу все документы, а мы будем рассчитывать налоги и сдавать отчетность.<br><br>
+                        Вы самостоятельно вносите в программу все документы, а мы будем рассчитывать налоги и сдавать
+                        отчетность.<br><br>
                         Для клиентов с нулевой отчетностью цена будет еще меньше.
                     </div>
                     <div class="tariff-card__price">От 2 600 руб./мес</div>
                     <div class="tariff-card__subtitle">Что делаем мы</div>
                     <ul class="tariff-card__list">
-                        <li>предоставляем вам доступ к облачной версии программы 1С:Бухгалтерия 3.0 для одного пользователя</li>
+                        <li>предоставляем вам доступ к облачной версии программы 1С:Бухгалтерия 3.0 для одного
+                            пользователя</li>
                         <li>предоставляем цифровую подпись для 1С-Отчетности</li>
-                        <li>составляем регистры бухгалтерского учета и отчеты об остатках денежных средств по расчетному счету и кассе, состоянии дебиторской и кредиторской задолженности</li>
+                        <li>составляем регистры бухгалтерского учета и отчеты об остатках денежных средств по расчетному
+                            счету и кассе, состоянии дебиторской и кредиторской задолженности</li>
                         <li>рассчитываем налоги, формируем и своевременно сдаем отчетность</li>
                         <li>информируем вас о суммах и сроках</li>
                         <li>консультируем вас по налогам и учету</li>
@@ -192,8 +208,10 @@
                 <div class="tariff-card">
                     <div class="tariff-card__header">Комплексный сервис</div>
                     <div class="tariff-card__desc">
-                        Мы ведем бухгалтерский, налоговый, кадровый учет и рассчитываем зарплату для ваших сотрудников.<br><br>
-                        На любом тарифе предоставляем доступ к облачной 1С:Бухгалтерии и консультируем по налогам и учету.
+                        Мы ведем бухгалтерский, налоговый, кадровый учет и рассчитываем зарплату для ваших
+                        сотрудников.<br><br>
+                        На любом тарифе предоставляем доступ к облачной 1С:Бухгалтерии и консультируем по налогам и
+                        учету.
                     </div>
                     <div class="tariff-card__price">От 6 100 руб./мес</div>
                     <div class="tariff-card__subtitle">Что делаем мы</div>

@@ -79,7 +79,8 @@
     cursor: pointer;
 }
 
-.header__btn_tel {
+.header__btn-register,
+.header__btn-login {
     width: 189px;
     height: 49px;
 }
@@ -586,10 +587,7 @@
     width: 28px;
     height: 28px;
     filter: brightness(0) invert(1);
-    transition: filter 0.2s;
-}
-.footer__socials a:hover img {
-    filter: brightness(0) invert(0.7) sepia(1) hue-rotate(-40deg) saturate(5);
+
 }
 @media (max-width: 1100px) {
     .footer__main {
@@ -619,4 +617,51 @@
         gap: 10px;
         padding: 18px 10px;
     }
+}
+
+.register-form {
+    max-width: 350px;
+    margin: -50px auto;
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.register-form__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #e31e24;
+}
+
+.register-form__input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.register-form__btn {
+    background: #e31e24;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.register-form__btn:hover {
+    background: #b81a1f;
+}
+
+.register-form__error {
+    color: #e31e24;
+    text-align: center;
+    font-size: 0.95rem;
 }
